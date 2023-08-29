@@ -3,7 +3,7 @@ package Domen;
 public class Product {
     private String name;
     private int price;
-
+    
     public Product(String name, int price) {
         this.name = name;
 
@@ -36,7 +36,7 @@ public class Product {
     @Override
     public String toString()
     {
-        return "Product: price="+ this.price+"; name="+this.name;
+        return "Product: price="+ this.price+"; name="+ this.name;
     }
     
 }
