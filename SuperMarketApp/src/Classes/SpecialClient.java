@@ -47,12 +47,4 @@ public class SpecialClient extends Actor  {
     public void setIdVIP(int idVIP) {
         this.idVIP = idVIP;
     }
-
-    // public int getIdVIP() {
-    //     return idVIP;
-    // }
-
-    // public void setIdVIP(int idVIP) {
-    //     this.idVIP = idVIP;
-    // }
 }
