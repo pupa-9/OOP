@@ -4,6 +4,7 @@ import Classes.OrdinaryClient;
 import Classes.SpecialClient;
 import Classes.TaxInspector;
 import Interfaces.iActorBehaviour;
+import Interfaces.iReturnOrder;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -16,6 +17,8 @@ public class App {
         magnit.acceptToMarket(client1);
         magnit.acceptToMarket(client2);
         magnit.acceptToMarket(client3);
+                
+
 
         magnit.update();
     }

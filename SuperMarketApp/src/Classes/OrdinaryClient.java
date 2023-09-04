@@ -2,9 +2,6 @@ package Classes;
 
 public class OrdinaryClient extends Actor {
 
-   // private boolean isTakenOrder;
-   // private boolean isMakeOrder;
-
     public OrdinaryClient(String name) {
         super(name);
     }
