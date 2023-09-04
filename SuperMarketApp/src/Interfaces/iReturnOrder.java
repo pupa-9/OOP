@@ -18,5 +18,5 @@ public interface iReturnOrder {
      * @return false - заказ нельзя вернуть.
      */
 
-    boolean isReturnable();
+    boolean isReturnOrder();
 }
