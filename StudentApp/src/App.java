@@ -84,7 +84,8 @@ public class App {
         System.out.println("_____________________________________________________________");
         System.out.println("СОРТИРОВКА");
         System.out.println("_____________________________________________________________");
-
+        
+        
         Collections.sort(steam109.getSteam());
 
         for (StudentGroup x : steam109) {
