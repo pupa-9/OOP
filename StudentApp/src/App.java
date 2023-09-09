@@ -2,9 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import Controlers.AccountController;
+import Domen.PersonComparator;
 import Domen.Student;
 import Domen.StudentGroup;
 import Domen.StudentSteam;
+import Domen.Teacher;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -84,7 +87,8 @@ public class App {
         System.out.println("_____________________________________________________________");
         System.out.println("СОРТИРОВКА");
         System.out.println("_____________________________________________________________");
-
+        
+        
         Collections.sort(steam109.getSteam());
 
         for (StudentGroup x : steam109) {
@@ -96,5 +100,21 @@ public class App {
         // for(Student s : group5123) {
         //     System.out.println(s);  
         // }
+        
+        /**
+         * Сравнение через Comparator   
+         */
+        Teacher t1 = new Teacher("Галина", 55, "Docent");
+        Teacher t2 = new Teacher("Татьяна", 57, "Docent");
+
+        System.out.println(new PersonComparator<Student>().compare(s1,s3));
+        System.out.println(new PersonComparator<Teacher>().compare(t1, t2));
+
+        // AccountController controller = new AccountController();
+        // controller.paySalary(t1, 50000);
+
+        AccountController.paySalary(t1, 50000); 
+        
+        System.out.println(AccountController.averageAge(listStud1));
     }
 }
