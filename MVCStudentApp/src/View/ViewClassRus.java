@@ -6,7 +6,7 @@ import java.util.Scanner;
 import Controller.Interfaces.iGetView;
 import Model.Core.Student;
 
-public class ViewClass implements iGetView {
+public class ViewClassRus implements iGetView {
 
     public void printAllStudent(List<Student> students)
     {
@@ -23,5 +23,11 @@ public class ViewClass implements iGetView {
         Scanner in = new Scanner(System.in);
         System.out.println(msg);
         return in.nextLine();
+    }
+
+    @Override
+    public void deleteStudent() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
     }
 }

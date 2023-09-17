@@ -7,4 +7,13 @@ import Model.Core.Student;
 public interface iGetView {
     void printAllStudent(List<Student> students);
     String prompt(String msg);
+    void deleteStudent();
+
+    /**
+     * Индентификатор студентов
+     * @param id
+     * @param student
+     */
+    // void addStudent(long id, Student student);
+    // void deleteStudent(long id);
 }

@@ -15,5 +15,17 @@ public class ModelClassList implements iGetModel {
 
     public List<Student> getStudents() {
         return students;
+    }
+
+    // @Override
+    // public void addStudent(long id, Student student) {
+    //     // TODO Auto-generated method stub
+    //     throw new UnsupportedOperationException("Unimplemented method 'addStudent'");
+    // }
+
+    @Override
+    public void deleteStudent(long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
     } 
 }
