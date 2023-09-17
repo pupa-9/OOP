@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import Controller.ControllerClass;
 import Controller.Interfaces.iGetModel;
@@ -7,7 +9,9 @@ import Controller.Interfaces.iGetView;
 import Model.ModelClassFile;
 import Model.ModelClassList;
 import Model.Core.Student;
-import View.ViewClass;
+import View.ViewClassRus;
+import View.ViewClassEng;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -28,6 +32,9 @@ public class App {
         students.add(s6);
         students.add(s7);
 
+        Map<Long,Student> studentsMap = new HashMap<Long,Student>();
+        studentsMap.put(1L,s1);
+
         ModelClassFile fModel = new ModelClassFile("StudentDB.csv");
         //fModel.saveAllStudentToFile(students);
 
@@ -36,7 +43,7 @@ public class App {
         //ViewClass view = new ViewClass();
 
         iGetModel modelList = fModel;//new ModelClassList(students);
-        iGetView view = new ViewClass();
+        iGetView view = new ViewClassRus();
 
         ControllerClass controller = new ControllerClass(modelList, view);
 

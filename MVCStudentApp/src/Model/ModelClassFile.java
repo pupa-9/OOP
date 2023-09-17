@@ -13,6 +13,13 @@ import Model.Core.Student;
 public class ModelClassFile implements iGetModel {
     private String fileName;
 
+    @Override
+    public void deleteStudent(long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+    }
+
+
     public ModelClassFile(String fileName) {
         this.fileName = fileName;
 

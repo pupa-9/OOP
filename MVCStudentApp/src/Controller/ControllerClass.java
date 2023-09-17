@@ -2,12 +2,15 @@ package Controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import Controller.Interfaces.iGetModel;
 import Controller.Interfaces.iGetView;
 import Model.ModelClassList;
+import Model.ModelClassHash;
 import Model.Core.Student;
-import View.ViewClass;
+import View.ViewClassRus;
+import View.ViewClassEng;
 
 public class ControllerClass {
 
@@ -50,7 +53,9 @@ public class ControllerClass {
         //view.printAllStudent(model.getStudents());
     }
 
-
+    /**
+     * Добавили команду Delete в метод run
+     */
     public void run()
     {
         Command com = Command.NONE;
@@ -68,6 +73,13 @@ public class ControllerClass {
                 case LIST:
                    view.printAllStudent(model.getStudents());
                    break;
+                case DELETE:
+                    view.printAllStudent(model.getStudents());
+                    Scanner scanner = new Scanner(System.in);
+                    view.prompt("Выберете ID студента, которого нужно удалить");
+                    Long id = scanner.nextLong();
+                    scanner.close();
+                    model.deleteStudent(id);
             }
         }
     }
